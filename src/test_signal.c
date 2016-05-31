@@ -100,8 +100,7 @@ MEMBER(ucontext_t, uc_stack, stack_t);
 MEMBER(ucontext_t, uc_mcontext, mcontext_t);
 
 TYPE(stack_t);
-// TODO(ed): Fix FreeBSD!
-// MEMBER(stack_t, ss_sp, void *);
+MEMBER(stack_t, ss_sp, void *);
 MEMBER(stack_t, ss_size, size_t);
 MEMBER(stack_t, ss_flags, int);
 
