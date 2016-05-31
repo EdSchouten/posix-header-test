@@ -1,9 +1,3 @@
-#ifdef __FreeBSD__
-#include <locale.h>
-#include <sys/types.h>
-ssize_t strfmon_l(char *restrict, size_t, locale_t, const char *restrict, ...);
-#endif
-
 #include <monetary.h>
 
 #include "test_util.h"
