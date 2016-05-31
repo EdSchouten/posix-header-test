@@ -1,7 +1,3 @@
-#ifdef __FreeBSD__
-#include <stddef.h>
-#endif
-
 #include <sys/socket.h>
 
 #include "test_util.h"
