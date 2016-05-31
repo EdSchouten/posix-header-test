@@ -4,8 +4,7 @@
 
 TYPE(datum);
 MEMBER(datum, dptr, void *);
-// TODO(ed): Fix FreeBSD!
-// MEMBER(datum, dsize, size_t);
+MEMBER(datum, dsize, size_t);
 
 TYPE_UINT(size_t);
 
