@@ -52,8 +52,7 @@ IDENT(LC_GLOBAL_LOCALE, locale_t);
 TYPE(locale_t);
 
 IDENT(duplocale, locale_t (*)(locale_t));
-// TODO(ed): Fix FreeBSD.
-// IDENT(freelocale, void (*)(locale_t));
+IDENT(freelocale, void (*)(locale_t));
 IDENT(localeconv, struct lconv *(*)(void));
 IDENT(newlocale, locale_t (*)(int, const char *, locale_t));
 IDENT(setlocale, char *(*)(int, const char *));

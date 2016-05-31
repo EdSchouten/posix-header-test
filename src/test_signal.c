@@ -1,6 +1,5 @@
 #ifdef __FreeBSD__
-#include <sys/types.h>
-#include <ucontext.h>
+#include <signal.h>
 void psiginfo(const siginfo_t *, const char *);
 #endif
 
@@ -30,8 +29,7 @@ MEMBER(struct sigevent, sigev_notify, int);
 MEMBER(struct sigevent, sigev_signo, int);
 MEMBER(struct sigevent, sigev_value, union sigval);
 MEMBER(struct sigevent, sigev_notify_function, void (*)(union sigval));
-// TODO(ed): Fix FreeBSD!
-// MEMBER(struct sigevent, sigev_notify_attributes, pthread_attr_t *);
+MEMBER(struct sigevent, sigev_notify_attributes, pthread_attr_t *);
 
 IDENT_INT(SIGEV_NONE);
 IDENT_INT(SIGEV_SIGNAL);

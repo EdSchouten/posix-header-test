@@ -1,8 +1,3 @@
-#ifdef __FreeBSD__
-#define _WITH_DPRINTF
-#define _WITH_GETLINE
-#endif
-
 #include <stdio.h>
 
 #include "test_util.h"

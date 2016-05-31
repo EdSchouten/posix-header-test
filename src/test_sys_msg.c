@@ -24,8 +24,7 @@ TYPE_INT(time_t);
 
 IDENT(msgctl, int (*)(int, int, struct msqid_ds *));
 IDENT(msgget, int (*)(key_t, int));
-// TODO(ed): Fix FreeBSD!
-// IDENT(msgrcv, ssize_t (*)(int, void *, size_t, long, int));
+IDENT(msgrcv, ssize_t (*)(int, void *, size_t, long, int));
 IDENT(msgsnd, int (*)(int, const void *, size_t, int));
 
 #define TRANSITIVE

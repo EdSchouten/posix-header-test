@@ -80,10 +80,9 @@ IDENT(getaddrinfo,
       int (*)(const char *restrict, const char *restrict,
               const struct addrinfo *restrict, struct addrinfo **restrict));
 IDENT(gethostent, struct hostent *(*)(void));
-// TODO(ed): Fix FreeBSD!
-// IDENT(getnameinfo,
-//       int (*)(const struct sockaddr *restrict, socklen_t, char *restrict,
-//               socklen_t, char *restrict, socklen_t, int));
+IDENT(getnameinfo,
+      int (*)(const struct sockaddr *restrict, socklen_t, char *restrict,
+              socklen_t, char *restrict, socklen_t, int));
 IDENT(getnetbyaddr, struct netent *(*)(uint32_t, int));
 IDENT(getnetbyname, struct netent *(*)(const char *));
 IDENT(getnetent, struct netent *(*)(void));
