@@ -1,6 +1,5 @@
 #ifdef __FreeBSD__
 #include <stddef.h>
-#include <sys/types.h>
 #endif
 
 #include <sys/socket.h>
