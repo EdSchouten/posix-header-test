@@ -6,7 +6,9 @@
 #define NAME NAME2(__COUNTER__)
 
 #define IDENT(name, type) _Static_assert(_Generic(name, type : 1), "")
+#define IDENT_INIT(name, type) static const type NAME = name
 #define IDENT_INT(name) IDENT((int)((name)&0), int)
+#define IDENT_PROC(name) static inline void NAME(void) { name; }
 #define MEMBER(obj, field, type) IDENT(((obj *)0)->field, type)
 #define TYPE(name) static const name NAME
 #define TYPE_ARITH(name) static name NAME = (name)0 + 0

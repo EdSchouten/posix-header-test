@@ -1,3 +1,5 @@
 #include <assert.h>
 
-static inline void foo(void) { assert(1); }
+#include "test_util.h"
+
+IDENT_PROC(assert(1));

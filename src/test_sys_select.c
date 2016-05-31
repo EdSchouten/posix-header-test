@@ -17,12 +17,10 @@ TYPE(fd_set);
 
 IDENT_INT(FD_SETSIZE);
 
-static inline void foo(fd_set *fds) {
-  FD_CLR(0, fds);
-  FD_SET(0, fds);
-  FD_ZERO(fds);
-}
+IDENT_PROC(FD_CLR(0, (fd_set *)0));
+IDENT_PROC(FD_SET(0, (fd_set *)0));
 IDENT_INT(FD_ISSET(0, (fd_set *)0));
+IDENT_PROC(FD_ZERO((fd_set *)0));
 
 IDENT(pselect,
       int (*)(int, fd_set *restrict, fd_set *restrict, fd_set *restrict,

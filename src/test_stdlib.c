@@ -57,7 +57,7 @@ IDENT(getenv, char *(*)(const char *));
 IDENT(getsubopt, int (*)(char **, char *const *, char **));
 IDENT(grantpt, int (*)(int));
 // TODO(ed): Fix FreeBSD!
-// DEF(initstate, char *(*)(unsigned, char *, size_t));
+// IDENT(initstate, char *(*)(unsigned, char *, size_t));
 IDENT(jrand48, long (*)(unsigned short[3]));
 IDENT(l64a, char *(*)(long));
 IDENT(labs, long (*)(long));
@@ -88,12 +88,12 @@ IDENT(realpath, char *(*)(const char *restrict, char *restrict));
 IDENT(seed48, unsigned short *(*)(unsigned short[3]));
 IDENT(setenv, int (*)(const char *, const char *, int));
 // TODO(ed): Fix FreeBSD!
-// DEF(setkey, void (*)(const char *));
+// IDENT(setkey, void (*)(const char *));
 IDENT(setstate, char *(*)(char *));
 IDENT(srand, void (*)(unsigned));
 IDENT(srand48, void (*)(long));
 // TODO(ed): Fix FreeBSD!
-// DEF(srandom, void (*)(unsigned));
+// IDENT(srandom, void (*)(unsigned));
 IDENT(strtod, double (*)(const char *restrict, char **restrict));
 IDENT(strtof, float (*)(const char *restrict, char **restrict));
 IDENT(strtol, long (*)(const char *restrict, char **restrict, int));

@@ -19,12 +19,10 @@ IDENT_INT(ITIMER_REAL);
 IDENT_INT(ITIMER_VIRTUAL);
 IDENT_INT(ITIMER_PROF);
 
-static inline void foo(fd_set *fds) {
-  FD_CLR(0, fds);
-  FD_SET(0, fds);
-  FD_ZERO(fds);
-}
+IDENT_PROC(FD_CLR(0, (fd_set *)0));
+IDENT_PROC(FD_SET(0, (fd_set *)0));
 IDENT_INT(FD_ISSET(0, (fd_set *)0));
+IDENT_PROC(FD_ZERO((fd_set *)0));
 IDENT_INT(FD_SETSIZE);
 
 IDENT(getitimer, int (*)(int, struct itimerval *));

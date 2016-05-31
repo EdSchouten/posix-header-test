@@ -29,10 +29,10 @@ MEMBER(struct sockaddr_in6, sin6_addr, struct in6_addr);
 MEMBER(struct sockaddr_in6, sin6_scope_id, uint32_t);
 
 IDENT(in6addr_any, struct in6_addr);
-static const struct in6_addr any_init = IN6ADDR_ANY_INIT;
+IDENT_INIT(IN6ADDR_ANY_INIT, struct in6_addr);
 
 IDENT(in6addr_loopback, struct in6_addr);
-static const struct in6_addr loopback_init = IN6ADDR_LOOPBACK_INIT;
+IDENT_INIT(IN6ADDR_LOOPBACK_INIT, struct in6_addr);
 
 TYPE(struct ipv6_mreq);
 MEMBER(struct ipv6_mreq, ipv6mr_multiaddr, struct in6_addr);
