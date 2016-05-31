@@ -20,7 +20,9 @@ _Complex long double ctanhl(_Complex long double);
 _Complex long double ctanl(_Complex long double);
 #endif
 
+#ifndef TRANSITIVE
 #include <complex.h>
+#endif
 
 #include "test_util.h"
 

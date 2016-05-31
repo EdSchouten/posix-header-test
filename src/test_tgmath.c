@@ -137,3 +137,7 @@ REAL_1(cimag);
 COMPLEX_1(conj);
 COMPLEX_1(cproj);
 REAL_1(creal);
+
+#define TRANSITIVE
+#include "test_complex.c"
+#include "test_math.c"

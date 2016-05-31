@@ -1,4 +1,6 @@
+#ifndef TRANSITIVE
 #include <math.h>
+#endif
 
 #include "test_util.h"
 
