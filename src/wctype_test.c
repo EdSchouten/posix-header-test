@@ -3,10 +3,10 @@
 #include "util.h"
 
 TYPE_INT(wint_t);
-TYPE_ARITH(wctrans_t);
-TYPE_ARITH(wctype_t);
+TYPE_SCALAR(wctrans_t);
+TYPE_SCALAR(wctype_t);
 
-TYPE(locale_t);
+TYPE_SCALAR(locale_t);
 
 IDENT(WEOF, wint_t);
 

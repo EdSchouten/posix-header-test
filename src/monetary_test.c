@@ -2,7 +2,7 @@
 
 #include "util.h"
 
-TYPE(locale_t);
+TYPE_SCALAR(locale_t);
 TYPE_UINT(size_t);
 TYPE_SINT(ssize_t);
 

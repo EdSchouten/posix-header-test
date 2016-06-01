@@ -10,7 +10,7 @@ char *strerror_l(int, locale_t);
 IDENT(NULL, void *);
 TYPE_UINT(size_t);
 
-TYPE(locale_t);
+TYPE_SCALAR(locale_t);
 
 IDENT(memccpy, void *(*)(void *restrict, const void *restrict, int, size_t));
 IDENT(memchr, void *(*)(const void *, int, size_t));

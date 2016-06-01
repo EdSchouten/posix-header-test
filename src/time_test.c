@@ -13,14 +13,14 @@ extern int daylight;
 
 #include "util.h"
 
-TYPE(clock_t);
+TYPE_ARITH(clock_t);
 TYPE_UINT(size_t);
 TYPE_INT(time_t);
 
 TYPE(clockid_t);
 TYPE(timer_t);
 
-TYPE(locale_t);
+TYPE_SCALAR(locale_t);
 
 TYPE_SINT(pid_t);
 

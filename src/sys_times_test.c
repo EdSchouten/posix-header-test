@@ -8,6 +8,6 @@ MEMBER(struct tms, tms_stime, clock_t);
 MEMBER(struct tms, tms_cutime, clock_t);
 MEMBER(struct tms, tms_cstime, clock_t);
 
-TYPE(clock_t);
+TYPE_ARITH(clock_t);
 
 IDENT(times, clock_t (*)(struct tms *));

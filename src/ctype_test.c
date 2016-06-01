@@ -2,7 +2,7 @@
 
 #include "util.h"
 
-TYPE(locale_t);
+TYPE_SCALAR(locale_t);
 
 IDENT(isalnum, int (*)(int));
 IDENT(isalnum_l, int (*)(int, locale_t));

@@ -3,7 +3,7 @@
 #include "util.h"
 
 TYPE_FORWARD(FILE);
-TYPE(locale_t);
+TYPE_SCALAR(locale_t);
 TYPE(mbstate_t);
 TYPE_UINT(size_t);
 TYPE(va_list);

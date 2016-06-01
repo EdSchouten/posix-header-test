@@ -20,6 +20,7 @@
   IDENT(inst_##a, b)
 #define TYPE_FORWARD(name) static name *const NAME = 0
 #define TYPE_INT(name) static name const NAME = 1
+#define TYPE_SCALAR(name) static name const NAME = (name)0
 #define TYPE_SINT(name)                                                        \
   TYPE_INT(name);                                                              \
   _Static_assert((name)-1 < 0, "")

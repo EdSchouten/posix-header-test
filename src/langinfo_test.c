@@ -2,7 +2,7 @@
 
 #include "util.h"
 
-TYPE(locale_t);
+TYPE_SCALAR(locale_t);
 TYPE(nl_item);
 
 IDENT(CODESET, nl_item);
