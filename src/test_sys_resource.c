@@ -9,10 +9,10 @@ IDENT_INT(PRIO_USER);
 // TODO(ed): Fix FreeBSD!
 // TYPE_UINT(rlim_t);
 
+IDENT(RLIM_INFINITY, rlim_t);
 // TODO(ed): Fix FreeBSD!
-// IDENT_INT(RLIM_INFINITY);
-// IDENT_INT(RLIM_SAVED_MAX);
-// IDENT_INT(RLIM_SAVED_CUR);
+// IDENT(RLIM_SAVED_MAX, rlim_t);
+// IDENT(RLIM_SAVED_CUR, rlim_t);
 
 IDENT_INT(RUSAGE_SELF);
 IDENT_INT(RUSAGE_CHILDREN);
@@ -43,5 +43,4 @@ IDENT(getrusage, int (*)(int, struct rusage *));
 // IDENT(setpriority, int (*)(int, id_t, int));
 IDENT(setrlimit, int (*)(int, const struct rlimit *));
 
-// TODO(ed): Fix FreeBSD!
-// TYPE_SINT(id_t);
+TYPE_SINT(id_t);
