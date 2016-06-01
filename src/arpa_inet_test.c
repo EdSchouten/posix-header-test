@@ -21,6 +21,9 @@ TYPE_UINT(uint16_t);
 
 IDENT(inet_addr, in_addr_t (*)(const char *));
 IDENT(inet_ntoa, char *(*)(struct in_addr));
+IDENT(inet_pton, int (*)(int, const char *restrict, void *restrict));
+
+#include <sys/socket.h>
+
 IDENT(inet_ntop,
       const char *(*)(int, const void *restrict, char *restrict, socklen_t));
-IDENT(inet_pton, int (*)(int, const char *restrict, void *restrict));
