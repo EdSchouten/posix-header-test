@@ -2,9 +2,9 @@
 
 #include "util.h"
 
-IDENT(TMAGIC, char *);
+IDENT_STR(TMAGIC);
 IDENT(TMAGLEN, int);
-IDENT(TVERSION, char *);
+IDENT_STR(TVERSION);
 IDENT(TVERSLEN, int);
 
 IDENT(REGTYPE, int);

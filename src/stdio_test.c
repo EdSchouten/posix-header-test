@@ -29,7 +29,7 @@ IDENT(EOF, int);
 
 IDENT(NULL, void *);
 
-IDENT(P_tmpdir, char *);
+IDENT_STR(P_tmpdir);
 
 IDENT(stderr, FILE *);
 IDENT(stdin, FILE *);

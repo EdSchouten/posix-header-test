@@ -8,7 +8,10 @@
 #define IDENT(name, type) _Static_assert(_Generic(name, type : 1), "")
 #define IDENT_INIT(name, type) static type const NAME = name
 #define IDENT_INT(name) IDENT((int)((name)&0), int)
-#define IDENT_PROC(name) static inline void NAME(void) { name; }
+#define IDENT_PROC(name)                                                       \
+  static inline void NAME(void) { name; }
+#define IDENT_STR(name)                                                        \
+  _Static_assert(_Generic(name, char * : 1, const char * : 1), "")
 #define MEMBER(obj, field, type) IDENT(((obj *)0)->field, type)
 #define TYPE(name) static name const NAME
 #define TYPE_ARITH(name) static name const NAME = (name)0 + 0
