@@ -1,0 +1,30 @@
+#include <tar.h>
+
+#include "util.h"
+
+IDENT(TMAGIC, char *);
+IDENT(TMAGLEN, int);
+IDENT(TVERSION, char *);
+IDENT(TVERSLEN, int);
+
+IDENT(REGTYPE, int);
+IDENT(AREGTYPE, int);
+IDENT(LNKTYPE, int);
+IDENT(SYMTYPE, int);
+IDENT(CHRTYPE, int);
+IDENT(BLKTYPE, int);
+IDENT(DIRTYPE, int);
+IDENT(FIFOTYPE, int);
+IDENT(CONTTYPE, int);
+
+IDENT(TSUID, int);
+IDENT(TSGID, int);
+IDENT(TUREAD, int);
+IDENT(TUWRITE, int);
+IDENT(TUEXEC, int);
+IDENT(TGREAD, int);
+IDENT(TGWRITE, int);
+IDENT(TGEXEC, int);
+IDENT(TOREAD, int);
+IDENT(TOWRITE, int);
+IDENT(TOEXEC, int);
