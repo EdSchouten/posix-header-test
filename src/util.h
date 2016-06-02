@@ -1,5 +1,5 @@
-#ifndef TEST_UTIL_H
-#define TEST_UTIL_H
+#ifndef UTIL_H
+#define UTIL_H
 
 #define NAME1(n) name_##n
 #define NAME2(n) NAME1(n)
