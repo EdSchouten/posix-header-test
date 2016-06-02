@@ -25,59 +25,59 @@ _Complex long double ctanl(_Complex long double);
 #include "util.h"
 
 // Function always returns a real floating point type.
-#define REAL_1(f, ...)                                                         \
-  IDENT(f(1.0f, ##__VA_ARGS__), float);                                        \
-  IDENT(f(1.0, ##__VA_ARGS__), double);                                        \
-  IDENT(f(1.0l, ##__VA_ARGS__), long double);                                  \
-  IDENT(f(CMPLXF(1.0f, 1.0f), ##__VA_ARGS__), float);                          \
-  IDENT(f(CMPLX(1.0, 1.0), ##__VA_ARGS__), double);                            \
+#define REAL_1(f, ...)                                \
+  IDENT(f(1.0f, ##__VA_ARGS__), float);               \
+  IDENT(f(1.0, ##__VA_ARGS__), double);               \
+  IDENT(f(1.0l, ##__VA_ARGS__), long double);         \
+  IDENT(f(CMPLXF(1.0f, 1.0f), ##__VA_ARGS__), float); \
+  IDENT(f(CMPLX(1.0, 1.0), ##__VA_ARGS__), double);   \
   IDENT(f(CMPLXL(1.0l, 1.0l), ##__VA_ARGS__), long double)
 
-#define REAL_2(f, ...)                                                         \
-  IDENT(f(1.0f, 1.0f, ##__VA_ARGS__), float);                                  \
-  IDENT(f(1.0, 1.0f, ##__VA_ARGS__), double);                                  \
-  IDENT(f(1.0f, 1, ##__VA_ARGS__), double);                                    \
-  IDENT(f(1.0f, 1.0l, ##__VA_ARGS__), long double);                            \
-  IDENT(f(CMPLXF(1.0f, 1.0f), 1.0f, ##__VA_ARGS__), float);                    \
-  IDENT(f(CMPLX(1.0, 1.0), 1, ##__VA_ARGS__), double);                         \
+#define REAL_2(f, ...)                                      \
+  IDENT(f(1.0f, 1.0f, ##__VA_ARGS__), float);               \
+  IDENT(f(1.0, 1.0f, ##__VA_ARGS__), double);               \
+  IDENT(f(1.0f, 1, ##__VA_ARGS__), double);                 \
+  IDENT(f(1.0f, 1.0l, ##__VA_ARGS__), long double);         \
+  IDENT(f(CMPLXF(1.0f, 1.0f), 1.0f, ##__VA_ARGS__), float); \
+  IDENT(f(CMPLX(1.0, 1.0), 1, ##__VA_ARGS__), double);      \
   IDENT(f(CMPLXL(1.0l, 1.0l), 1, ##__VA_ARGS__), long double)
 
-#define REAL_3(f)                                                              \
-  IDENT(f(1.0f, 1.0f, 1.0f), float);                                           \
-  IDENT(f(1.0f, 1.0f, 1.0), double);                                           \
-  IDENT(f(1, 1.0f, 1.0f), double);                                             \
-  IDENT(f(1.0, 1.0l, 1.0f), long double);                                      \
-  IDENT(f(CMPLXF(1.0f, 1.0f), 1.0f, 1.0f), float);                             \
-  IDENT(f(1.0f, CMPLX(1.0, 1.0), 1.0f), double);                               \
+#define REAL_3(f)                                  \
+  IDENT(f(1.0f, 1.0f, 1.0f), float);               \
+  IDENT(f(1.0f, 1.0f, 1.0), double);               \
+  IDENT(f(1, 1.0f, 1.0f), double);                 \
+  IDENT(f(1.0, 1.0l, 1.0f), long double);          \
+  IDENT(f(CMPLXF(1.0f, 1.0f), 1.0f, 1.0f), float); \
+  IDENT(f(1.0f, CMPLX(1.0, 1.0), 1.0f), double);   \
   IDENT(f(1.0, 1, CMPLXL(1.0l, 1.0l)), long double)
 
 // Function always returns a complex floating point type.
-#define COMPLEX_1(f)                                                           \
-  IDENT(f(1.0f), float complex);                                               \
-  IDENT(f(1.0), double complex);                                               \
-  IDENT(f(1), double complex);                                                 \
-  IDENT(f(1.0l), long double complex);                                         \
-  IDENT(f(CMPLXF(1.0f, 1.0f)), float complex);                                 \
-  IDENT(f(CMPLX(1.0, 1.0)), double complex);                                   \
+#define COMPLEX_1(f)                           \
+  IDENT(f(1.0f), float complex);               \
+  IDENT(f(1.0), double complex);               \
+  IDENT(f(1), double complex);                 \
+  IDENT(f(1.0l), long double complex);         \
+  IDENT(f(CMPLXF(1.0f, 1.0f)), float complex); \
+  IDENT(f(CMPLX(1.0, 1.0)), double complex);   \
   IDENT(f(CMPLXL(1.0l, 1.0l)), long double complex)
 
 // Function returns a real or complex floating point type.
-#define REAL_COMPLEX_1(f)                                                      \
-  IDENT(f(1.0f), float);                                                       \
-  IDENT(f(1.0), double);                                                       \
-  IDENT(f(1), double);                                                         \
-  IDENT(f(1.0l), long double);                                                 \
-  IDENT(f(CMPLXF(1.0f, 1.0f)), float complex);                                 \
-  IDENT(f(CMPLX(1.0, 1.0)), double complex);                                   \
+#define REAL_COMPLEX_1(f)                      \
+  IDENT(f(1.0f), float);                       \
+  IDENT(f(1.0), double);                       \
+  IDENT(f(1), double);                         \
+  IDENT(f(1.0l), long double);                 \
+  IDENT(f(CMPLXF(1.0f, 1.0f)), float complex); \
+  IDENT(f(CMPLX(1.0, 1.0)), double complex);   \
   IDENT(f(CMPLXL(1.0l, 1.0l)), long double complex)
 
-#define REAL_COMPLEX_2(f)                                                      \
-  IDENT(f(1.0f, 1.0f), float);                                                 \
-  IDENT(f(1.0, 1.0f), double);                                                 \
-  IDENT(f(1.0f, 1), double);                                                   \
-  IDENT(f(1.0l, 1.0), long double);                                            \
-  IDENT(f(1.0f, CMPLXF(1.0f, 1.0f)), float complex);                           \
-  IDENT(f(1, CMPLX(1.0f, 1.0f)), double complex);                              \
+#define REAL_COMPLEX_2(f)                            \
+  IDENT(f(1.0f, 1.0f), float);                       \
+  IDENT(f(1.0, 1.0f), double);                       \
+  IDENT(f(1.0f, 1), double);                         \
+  IDENT(f(1.0l, 1.0), long double);                  \
+  IDENT(f(1.0f, CMPLXF(1.0f, 1.0f)), float complex); \
+  IDENT(f(1, CMPLX(1.0f, 1.0f)), double complex);    \
   IDENT(f(CMPLXL(1.0l, 1.0l), 1.0), long double complex)
 
 REAL_COMPLEX_1(acos);

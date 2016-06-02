@@ -49,7 +49,7 @@ IDENT_INT(LC_ALL_MASK);
 
 IDENT(LC_GLOBAL_LOCALE, locale_t);
 
-TYPE(locale_t);
+TYPE_SCALAR(locale_t);
 
 IDENT(duplocale, locale_t (*)(locale_t));
 IDENT(freelocale, void (*)(locale_t));
