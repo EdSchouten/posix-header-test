@@ -16,9 +16,8 @@ IDENT_INT(PTHREAD_MUTEX_DEFAULT);
 IDENT_INT(PTHREAD_MUTEX_ERRORCHECK);
 IDENT_INT(PTHREAD_MUTEX_NORMAL);
 IDENT_INT(PTHREAD_MUTEX_RECURSIVE);
-// TODO(ed): Fix FreeBSD!
-// IDENT_INT(PTHREAD_MUTEX_ROBUST);
-// IDENT_INT(PTHREAD_MUTEX_STALLED);
+IDENT_INT(PTHREAD_MUTEX_ROBUST);
+IDENT_INT(PTHREAD_MUTEX_STALLED);
 IDENT_INIT(PTHREAD_ONCE_INIT, pthread_once_t);
 IDENT_INT(PTHREAD_PRIO_INHERIT);
 IDENT_INT(PTHREAD_PRIO_NONE);
@@ -120,8 +119,7 @@ IDENT(pthread_getspecific, void *(*)(pthread_key_t));
 IDENT(pthread_join, int (*)(pthread_t, void **));
 IDENT(pthread_key_create, int (*)(pthread_key_t *, void (*)(void *)));
 IDENT(pthread_key_delete, int (*)(pthread_key_t));
-// TODO(ed): Fix FreeBSD!
-// IDENT(pthread_mutex_consistent, int (*)(pthread_mutex_t *));
+IDENT(pthread_mutex_consistent, int (*)(pthread_mutex_t *));
 IDENT(pthread_mutex_destroy, int (*)(pthread_mutex_t *));
 // TODO(ed): Fix FreeBSD!
 // IDENT(pthread_mutex_getprioceiling,
